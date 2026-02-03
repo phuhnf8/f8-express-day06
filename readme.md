@@ -13,11 +13,12 @@ This repository contains the code and the sql file to create todo list applicati
 ```
 DB_HOST=host
 DB_USER=username
-DB_PASSWORD=password
+DB_PASS=password
 DB_NAME=db_test
 DB_PORT=3306
 
 SECRET_KEY=your_jwt_secret_key
+
 ```
 
 3. Install deps and start the server:
