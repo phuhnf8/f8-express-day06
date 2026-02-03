@@ -43,6 +43,7 @@ class AuthService {
 			const newTokens = await tokenService.generateToken(insertId);
 			return newTokens;
 		} catch (error) {
+			console.error(error);
 			throw new DbError("Failed to register user", error.errno ?? 500);
 		}
 	}

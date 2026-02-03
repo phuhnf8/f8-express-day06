@@ -59,7 +59,6 @@ CREATE TABLE IF NOT EXISTS `users` (
   `refresh_token` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '' COMMENT 'Refresh token strategy',
   `refresh_token_ttl` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `email` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dumping data for table db_test.users: ~1 rows (approximately)
