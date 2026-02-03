@@ -14,6 +14,7 @@ async function authRequired(req, res, next) {
 	try {
 		const result = await authService.validateAccessToken(token);
 		if (!result) throw new Error("Invalid token");
+
 		req.user = { id: result.id, email: result.email };
 
 		return next();

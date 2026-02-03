@@ -99,17 +99,17 @@ class AuthService {
 			if (isValid) {
 				// Check TTL
 				if (Date.now() >= exp) return false;
-
+				console.log(new Date(exp).toTimeString());
 				// Check existence of user in DB
 				const userData = await userModel.findUserById(userId);
 				if (!userData) return false;
 
 				// Check if token is revoked
-				const isRevoked = await revokedTokenModel.isTokenRevoked(
-					userId,
-					token
-				);
-				if (isRevoked) return false;
+				const isRevoked = await revokedTokenModel.isTokenRevoked(token);
+
+				if (isRevoked) {
+					return false;
+				}
 
 				const { email } = userData;
 				return {
