@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".",
+		"target": "es6",
+		"module": "CommonJS",
+		"paths": {
+			"@/*": ["./src/*"],
+			"@middlewares/*": ["./src/middlewares/*"],
+			"@routes/*": ["./src/routes/*"],
+			"@controllers/*": ["./src/controllers/*"],
+			"@models/*": ["./src/models/*"],
+			"@config/*": ["./src/config/*"]
+		},
+		"allowJs": true
+	}
+}
